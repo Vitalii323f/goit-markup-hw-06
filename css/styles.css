@@ -1,0 +1,47 @@
+/*Цвет основного текста  #757575 */
+/*Цвет заголовков #212121 */
+/* Цвет акцента #2196F3 */
+/* Цвет физич.адреса #FFFFFF */
+/* Цвет контактов в Футере mail, tel, rgba(255, 255, 255, 0.6) */
+/* Цвет фона шапки #FFFFFF */
+/* Основной цвет фона #E5E5E5 */
+/* Вторичный цвет фона #F5F4FA */
+/* цвет фона Герой и футер #2F303A */
+
+body {
+  background-color: #e5e5e5;
+  color: #757575;
+}
+/* Задает цвет логотипа */
+.logo {
+  color: #2196f3;
+}
+.logo-studio {
+  color: #212121;
+}
+
+/* Стилизируем ссылки */
+.site-nav .link {
+  color: #212121;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: #2196f3;
+}
+
+.contaсt-nav .link {
+  color: #757575;
+}
+.contaсt-nav .link:hover,
+.contaсt-nav .link:focus {
+  color: #2196f3;
+}
+/* Убираем точки у списков */
+.list {
+  list-style: none;
+}
+
+/* Задаем цвет тексту секции */
+.section-title {
+  color: #212121;
+}
