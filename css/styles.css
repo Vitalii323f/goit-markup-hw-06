@@ -5,19 +5,23 @@
 /* Цвет контактов в Футере mail, tel, rgba(255, 255, 255, 0.6) */
 /* Цвет фона шапки #FFFFFF */
 /* Основной цвет фона #E5E5E5 */
-/* Вторичный цвет фона #F5F4FA */
+/* Вторичный цвет фона #F5F4FA  !!!!! */
 /* цвет фона Герой и футер #2F303A */
 
 body {
   background-color: #e5e5e5;
   color: #757575;
+  font-family: Roboto;
 }
 /* Задает цвет логотипа */
 .logo {
   color: #2196f3;
 }
-.logo-studio {
+.logo-span {
   color: #212121;
+}
+.footer .logo-span {
+  color: #ffffff;
 }
 
 /* Стилизируем ссылки */
@@ -36,12 +40,65 @@ body {
 .contaсt-nav .link:focus {
   color: #2196f3;
 }
+.address-list .addres {
+  color: #ffffff;
+}
+.address-list .link {
+  color: rgba(255, 255, 255, 0.6);
+}
+.address-list .link:hover,
+.address-list .link:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
 /* Убираем точки у списков */
 .list {
   list-style: none;
 }
+.feature-list {
+  list-style: none;
+}
+.examples-list {
+  list-style: none;
+}
+.team-list {
+  list-style: none;
+}
+.adress-list {
+  list-style: none;
+}
+/* Секция Header */
+.header {
+  background-color: #ffffff;
+}
+/* Секция Hero */
+.hero {
+  background-color: #2f303a;
+}
 
-/* Задаем цвет тексту секции */
-.section-title {
+/* Задаем цвет тексту секции
+      Особенности */
+.feature-title {
   color: #212121;
+}
+.feature-list .title {
+  color: #212121;
+}
+
+/* Задаем цвет тексту секции
+Чем мы занимаемся */
+.examples-title {
+  color: #212121;
+}
+/* Задаем цвет тексту секции
+Наша команда*/
+
+.team-title {
+  color: #212121;
+}
+.team-list .title {
+  color: #212121;
+}
+/* Секция footer */
+.footer {
+  background-color: #2f303a;
 }
