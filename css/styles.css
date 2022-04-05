@@ -1,56 +1,70 @@
-/*Цвет основного текста  #757575 */
-/*Цвет заголовков #212121 */
-/* Цвет акцента #2196F3 */
-/* Цвет физич.адреса #FFFFFF */
-/* Цвет контактов в Футере mail, tel, rgba(255, 255, 255, 0.6) */
-/* Цвет фона шапки #FFFFFF */
-/* Основной цвет фона #E5E5E5 */
-/* Вторичный цвет фона #F5F4FA  !!!!! */
-/* цвет фона Герой и футер #2F303A */
-
-body {
-  background-color: #e5e5e5;
-  color: #757575;
-  font-family: Roboto;
+/*Обьявляем CSS переменные для цвета */
+:root {
+  --primary-text-color: #757575; /*Цвет основного текста  #757575 */
+  --title-text-color: #212121; /*Цвет заголовков #212121 */
+  --accent-color: #2196f3; /* Цвет акцента #2196F3 */
+  --address-text-color: #ffffff; /* Цвет физического адреса #ffffff */
+  --hero-text-color: #ffffff;
+  --footer-cont-text-color: rgba(
+    255,
+    255,
+    255,
+    0.6
+  ); /* Цвет контактов в Футере mail, tel, rgba(255, 255, 255, 0.6) */
+  --footer-logo-span-color: #ffffff; /*Цвет span в логотипе footer */
+  --primary-bg-color: #ffffff; /* Основной цвет фона body background #ffffff */
+  --secondary-bg-color: #f5f4fa; /* Вторичный цвет фона #F5F4FA */
+  --hero-bg-color: #2f303a; /* Цвет фона hero #2F303A */
+  --footer-bg-color: #2f303a; /* Цвет фона footer #2F303A */
+  --header-line-color: #ececec; /* Цвет линии в header #ECECEC !!!*/
 }
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  font-family: 'Roboto', Tahoma, sans-serif;
+}
+
 /* Задает цвет логотипа */
 .logo {
-  color: #2196f3;
+  color: var(--accent-color);
 }
 .logo-span {
-  color: #212121;
+  color: var(--title-text-color);
 }
 .footer .logo-span {
-  color: #ffffff;
+  color: var(--footer-logo-span-color);
 }
 
 /* Стилизируем ссылки */
 .site-nav .link {
-  color: #212121;
+  color: var(--title-text-color);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
-  color: #2196f3;
+  color: var(--accent-color);
+}
+.site-nav .link.current {
+  color: var(--accent-color); /* Делает акцент на активную страницу */
 }
 
 .contaсt-nav .link {
-  color: #757575;
+  color: var(--primary-text-color);
 }
 .contaсt-nav .link:hover,
 .contaсt-nav .link:focus {
-  color: #2196f3;
+  color: var(--accent-color);
 }
-.address-list .addres {
-  color: #ffffff;
+.address-list .address {
+  color: var(--address-text-color);
 }
 .address-list .link {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-cont-text-color);
 }
 .address-list .link:hover,
 .address-list .link:focus {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--accent-color);
 }
-/* Убираем точки у списков */
+/* Убираем точки в списков */
 .list {
   list-style: none;
 }
@@ -63,42 +77,61 @@ body {
 .team-list {
   list-style: none;
 }
-.adress-list {
+.address-list {
   list-style: none;
 }
 /* Секция Header */
 .header {
-  background-color: #ffffff;
 }
 /* Секция Hero */
 .hero {
-  background-color: #2f303a;
+  background-color: var(--hero-bg-color);
+  color: var(--hero-text-color);
 }
 
 /* Задаем цвет тексту секции
       Особенности */
 .feature-title {
-  color: #212121;
+  color: var(--title-text-color);
 }
 .feature-list .title {
-  color: #212121;
+  color: var(--title-text-color);
 }
 
 /* Задаем цвет тексту секции
 Чем мы занимаемся */
 .examples-title {
-  color: #212121;
+  color: var(--title-text-color);
 }
 /* Задаем цвет тексту секции
 Наша команда*/
-
+.team {
+  background-color: var(--secondary-bg-color);
+}
 .team-title {
-  color: #212121;
+  color: var(--title-text-color);
 }
 .team-list .title {
-  color: #212121;
+  color: var(--title-text-color);
 }
 /* Секция footer */
 .footer {
-  background-color: #2f303a;
+  background-color: var(--footer-bg-color);
+}
+
+/* Страница портфолио */
+/* Убираем точки в списках */
+.list-button {
+  list-style: none;
+}
+.project {
+  list-style: none;
+}
+
+/* Задаем цвет тексту */
+.portfolio-title {
+  color: var(--title-text-color);
+}
+.portfolio .title {
+  color: var(--title-text-color);
 }
