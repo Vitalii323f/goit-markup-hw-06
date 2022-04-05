@@ -80,9 +80,9 @@ body {
 .address-list {
   list-style: none;
 }
-/* Секция Header */
+/* Секция Header
 .header {
-}
+} */
 /* Секция Hero */
 .hero {
   background-color: var(--hero-bg-color);
