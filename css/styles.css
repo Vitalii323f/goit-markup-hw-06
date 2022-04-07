@@ -1,10 +1,10 @@
-/*Обьявляем CSS переменные для цвета */
+/*Объявляем CSS переменные для цвета */
 :root {
-  --primary-text-color: #757575; /*Цвет основного текста  #757575 */
-  --title-text-color: #212121; /*Цвет заголовков #212121 */
-  --accent-color: #2196f3; /* Цвет акцента #2196F3 */
-  --address-text-color: #ffffff; /* Цвет физического адреса #ffffff */
-  --hero-text-color: #ffffff;
+  --primary-text-color: #757575; /*Цвет основного текста  */
+  --title-text-color: #212121; /*Цвет заголовков */
+  --accent-color: #2196f3; /* Цвет акцента  */
+  --address-text-color: #ffffff; /* Цвет физического адреса  */
+  --hero-text-color: #ffffff; /* Цвет текста секции hero */
   --footer-cont-text-color: rgba(
     255,
     255,
@@ -12,15 +12,32 @@
     0.6
   ); /* Цвет контактов в Футере mail, tel, rgba(255, 255, 255, 0.6) */
   --footer-logo-span-color: #ffffff; /*Цвет span в логотипе footer */
-  --primary-bg-color: #ffffff; /* Основной цвет фона body background #ffffff */
-  --secondary-bg-color: #f5f4fa; /* Вторичный цвет фона #F5F4FA */
-  --hero-bg-color: #2f303a; /* Цвет фона hero #2F303A */
-  --footer-bg-color: #2f303a; /* Цвет фона footer #2F303A */
-  --header-line-color: #ececec; /* Цвет линии в header #ECECEC !!!*/
-  --btn-text-color: #ffffff;
+  --primary-bg-color: #ffffff; /* Основной цвет фона body background  */
+  --secondary-bg-color: #f5f4fa; /* Вторичный цвет фона */
+  --hero-bg-color: #2f303a; /* Цвет фона hero  */
+  --footer-bg-color: #2f303a; /* Цвет фона footer */
+  --header-line-color: #ececec; /* Цвет линии в header !!!*/
+  --btn-text-color: #ffffff; /*Цвет текста в кнопке*/
   --btn-accent-color: #2196f3; /* Цвет акцента кнопки */
   --btn-primary-color: #f5f4fa; /*Основной цвет кнопки*/
 }
+
+/* --------------Прячем заголовки-------------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/*-------------------- Страница Студия -----------------*/
+/* Глобальный стиль body */
 body {
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
@@ -30,7 +47,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Задает цвет логотипа */
+/* Задаем цвет логотипа */
 .logo {
   color: var(--accent-color);
   font-family: 'Raleway';
@@ -45,7 +62,7 @@ body {
   color: var(--footer-logo-span-color);
 }
 
-/* Стилизируем ссылки */
+/* Добавляем ссылкам наведение и фокус */
 .site-nav .link {
   color: var(--title-text-color);
 }
@@ -57,11 +74,11 @@ body {
   color: var(--accent-color); /* Делает акцент на активную страницу */
 }
 
-.contaсt-nav .link {
+.contact-nav .link {
   color: var(--primary-text-color);
 }
-.contaсt-nav .link:hover,
-.contaсt-nav .link:focus {
+.contact-nav .link:hover,
+.contact-nav .link:focus {
   color: var(--accent-color);
 }
 .address-list .street {
@@ -74,7 +91,7 @@ body {
 .address-list .link:focus {
   color: var(--accent-color);
 }
-/* Убираем точки в списков */
+/* Убираем точки в списках */
 .list {
   list-style: none;
 }
@@ -113,8 +130,6 @@ body {
 }
 /*Кнопка Заказать услугу */
 .btn-hero {
-  background-color: var(--accent-color);
-  color: var(--btn-text-color);
   font-family: inherit; /*Наследование шрифта через родителя */
   font-weight: 700;
   font-size: 16px;
@@ -123,13 +138,13 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--btn-text-color);
 }
 
-/* Задаем цвет тексту секции
-      Особенности */
-.feature-title {
-  color: var(--title-text-color);
-}
+/* Задаем цвет тексту секции Особенности */
+
 .feature-list .title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -147,7 +162,7 @@ body {
   line-height: 1.17;
   text-align: center;
 }
-/* Задаем цвет тексту секции
+/* Задаем цвет  секции и тексту
 Наша команда*/
 .team {
   background-color: var(--secondary-bg-color);
@@ -176,9 +191,9 @@ body {
   line-height: 1.7;
 }
 
-/* Страница портфолио */
+/*-------------------- Страница портфолио -----------------*/
 /* Убираем точки в списках */
-.list-button {
+.button-list {
   list-style: none;
 }
 .project {
@@ -193,29 +208,23 @@ body {
 
   text-align: center;
   letter-spacing: 0.03em;
+  cursor: pointer;
   background-color: var(--btn-primary-color);
 }
 .btn-filter:hover,
 .btn-filter:focus {
   background-color: var(--btn-accent-color);
-  color: #ffffff;
+  color: var(--btn-text-color);
 }
 /* Задаем цвет тексту */
-
-.portfolio .title {
+.project .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
   color: var(--title-text-color);
 }
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.project .text {
+  font-size: 16px;
+  line-height: 1.9;
 }
