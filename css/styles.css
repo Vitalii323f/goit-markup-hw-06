@@ -120,6 +120,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  background-color: aquamarine;
 }
 
 /* Секция Hero */
@@ -152,6 +153,9 @@ body {
 
 /* Задаем цвет тексту секции Особенности */
 
+.feature {
+  background-color: cadetblue;
+}
 .feature-list .title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -162,6 +166,9 @@ body {
 
 /* Задаем цвет тексту секции
 Чем мы занимаемся */
+.examples {
+  background-color: #f110ee;
+}
 .examples-title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -172,7 +179,8 @@ body {
 /* Задаем цвет  секции и тексту
 Наша команда*/
 .team {
-  background-color: var(--secondary-bg-color);
+  background-color: rgb(231, 243, 164);
+  /* background-color: var(--secondary-bg-color);*/
 }
 .team-title {
   color: var(--title-text-color);
