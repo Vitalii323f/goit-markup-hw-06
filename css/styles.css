@@ -20,8 +20,15 @@
   --btn-text-color: #ffffff; /*Цвет текста в кнопке*/
   --btn-accent-color: #2196f3; /* Цвет акцента кнопки */
   --btn-primary-color: #f5f4fa; /*Основной цвет кнопки*/
+  --color-border-portfolio: #eeeeee; /* Цвет рамки в карточкаъ портфолио*/
 }
-
+.conteiner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 1px solid #f11014;
+}
 /* --------------Прячем заголовки-------------- */
 .visually-hidden {
   position: absolute;
@@ -85,9 +92,13 @@ body {
 }
 .address-list .street {
   color: var(--address-text-color);
+  margin-bottom: 9px;
+  outline: 1px solid #f11014;
 }
 .address-list .link {
   color: var(--footer-cont-text-color);
+  outline: 1px solid #f11014;
+  margin-bottom: 9px;
 }
 .address-list .link:hover,
 .address-list .link:focus {
@@ -120,13 +131,18 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 24px;
+  padding-bottom: 25px;
   background-color: aquamarine;
 }
 
 /* Секция Hero */
 .hero {
+  text-align: center;
   background-color: var(--hero-bg-color);
   color: var(--hero-text-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   font-weight: 900;
@@ -135,6 +151,11 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  outline: 1px solid #f11014;
+  width: 696px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*Кнопка Заказать услугу */
 .btn-hero {
@@ -142,18 +163,23 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  cursor: pointer;
+
   background-color: var(--accent-color);
   color: var(--btn-text-color);
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 0px;
+  outline: 1px solid #f11014;
 }
 
 /* Задаем цвет тексту секции Особенности */
 
 .feature {
+  padding: 94px 0px;
   background-color: cadetblue;
 }
 .feature-list .title {
@@ -162,11 +188,13 @@ body {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 /* Задаем цвет тексту секции
 Чем мы занимаемся */
 .examples {
+  padding-bottom: 94px;
   background-color: #f110ee;
 }
 .examples-title {
@@ -175,10 +203,12 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
 /* Задаем цвет  секции и тексту
 Наша команда*/
 .team {
+  padding: 94px 0px;
   background-color: rgb(231, 243, 164);
   /* background-color: var(--secondary-bg-color);*/
 }
@@ -188,22 +218,33 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
 .team-list .title {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 10px;
 }
 .team-list .text {
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 30px;
+}
+.team-img {
+  margin-bottom: 30px;
 }
 /* Секция footer */
 .footer {
   background-color: var(--footer-bg-color);
   font-size: 14px;
   line-height: 1.7;
+  padding: 60px 0px;
+}
+.footer .logo {
+  margin-bottom: 20px;
+  outline: 1px solid #f11014;
 }
 
 /*-------------------- Страница портфолио -----------------*/
@@ -214,17 +255,21 @@ body {
 .project {
   list-style: none;
 }
+.portfolio {
+  background-color: rgb(28, 207, 235);
+  padding: 94px 0px;
+}
 /* Кнопки фильтра ,задаем цвет и свойства */
 .btn-filter {
   font-family: inherit; /*Наследование шрифта через родителя */
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
-
   text-align: center;
   letter-spacing: 0.03em;
-  cursor: pointer;
+
   background-color: var(--btn-primary-color);
+  border-radius: 4px;
 }
 .btn-filter:hover,
 .btn-filter:focus {
@@ -239,9 +284,19 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
+  margin-bottom: 4px;
+  outline: 1px solid #f11014;
 }
 .project .text {
   font-size: 16px;
   line-height: 1.9;
   color: var(--primary-text-color);
+  outline: 1px solid #f11014;
+}
+.portfolio-img {
+  margin-bottom: 20px;
+}
+.project .link {
+  border: 1px solid var(--color-border-portfolio);
+  display: inline-block;
 }

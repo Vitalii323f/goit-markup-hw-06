@@ -18,103 +18,119 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Верхняя линия -->
     <header class="header">
-      <nav>
-        <a href="./index.html" class="logo">Web<span class="logo-span">Studio</span></a>
-        <ul class="site-nav list">
-          <li><a href="./index.html" class="link current"> Студия </a></li>
-          <li><a href="./portfolio.html" class="link"> Портфолио </a></li>
-          <li><a href="" class="link"> Контакты </a></li>
-        </ul>
-      </nav>
+      <div class="conteiner">
+        <nav>
+          <a href="./index.html" class="logo">Web<span class="logo-span">Studio</span></a>
+          <ul class="site-nav list">
+            <li><a href="./index.html" class="link current"> Студия </a></li>
+            <li><a href="./portfolio.html" class="link"> Портфолио </a></li>
+            <li><a href="" class="link"> Контакты </a></li>
+          </ul>
+        </nav>
 
-      <ul class="contact-nav list">
-        <li><a href="tel:+380961111111" class="link"> +38-096-111-11-11 </a></li>
-        <li><a href="mailto:info@devstudio.com" class="link"> info@devstudio.com </a></li>
-      </ul>
+        <ul class="contact-nav list">
+          <li><a href="tel:+380961111111" class="link"> +38-096-111-11-11 </a></li>
+          <li><a href="mailto:info@devstudio.com" class="link"> info@devstudio.com </a></li>
+        </ul>
+      </div>
     </header>
 
     <main>
       <!-- Шапка Hero-->
 
       <section class="hero">
-        <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="btn-hero">Заказать услугу</button>
+        <div class="conteiner">
+          <h1 class="hero-title">Эффективные решения для вашего бизнеса </h1>
+          <button type="button" class="btn-hero">Заказать услугу</button>
+        </div>
       </section>
 
       <!-- Особенности
     Заголовок скрыть после завершения верстки -->
 
       <section class="feature">
-        <h2 class="visually-hidden">Особенности</h2>
-        <ul class="feature-list">
-          <li>
-            <h3 class="title">Внимание к деталям</h3>
-            <p>Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
-          </li>
-          <li>
-            <h3 class="title">Пунктуальность</h3>
-            <p>
-              Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
-            </p>
-          </li>
-          <li>
-            <h3 class="title">Планирование</h3>
-            <p>
-              Равным образом консультация с широким активом в значительной степени обуславливает.
-            </p>
-          </li>
-          <li>
-            <h3 class="title">Современные технологии</h3>
-            <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
-          </li>
-        </ul>
+        <div class="conteiner">
+          <h2 class="visually-hidden">Особенности</h2>
+          <ul class="feature-list">
+            <li>
+              <h3 class="title">Внимание к деталям</h3>
+              <p>
+                Идейные соображения, а также начало повседневной работы по формированию позиции.
+              </p>
+            </li>
+            <li>
+              <h3 class="title">Пунктуальность</h3>
+              <p>
+                Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+              </p>
+            </li>
+            <li>
+              <h3 class="title">Планирование</h3>
+              <p>
+                Равным образом консультация с широким активом в значительной степени обуславливает.
+              </p>
+            </li>
+            <li>
+              <h3 class="title">Современные технологии</h3>
+              <p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Чем мы занимаемся-->
       <section class="examples">
-        <h2 class="examples-title">Чем мы занимаемся</h2>
-        <ul class="examples-list">
-          <li><img src="./images/img1.jpg" alt="Разработка приложений" width="370" /></li>
-          <li><img src="./images/img2.jpg" alt="Разработка мобильных приложений" width="370" /></li>
-          <li><img src="./images/img3.jpg" alt="Дизайнерское решение " width="370" /></li>
-        </ul>
+        <div class="conteiner">
+          <h2 class="examples-title">Чем мы занимаемся</h2>
+          <ul class="examples-list">
+            <li><img src="./images/img1.jpg" alt="Разработка приложений" width="370" /></li>
+            <li>
+              <img src="./images/img2.jpg" alt="Разработка мобильных приложений" width="370" />
+            </li>
+            <li><img src="./images/img3.jpg" alt="Дизайнерское решение " width="370" /></li>
+          </ul>
+        </div>
       </section>
 
       <!-- Наша команда-->
       <section class="team">
+      <div class="conteiner">
         <h2 class="team-title">Наша команда</h2>
         <ul class="team-list">
           <li>
-            <img src="./images/Igor_1.jpg" alt="Игорь Демьяненко" width="270" />
+            <img src="./images/Igor_1.jpg" class="team-img" alt="Игорь Демьяненко" width="270" />
             <h3 class="title">Игорь Демьяненко</h3>
             <p class="text">Product Designer</p>
           </li>
           <li>
-            <img src="./images/Olga_2.jpg" alt="Ольга Репина" width="270" />
+            <img src="./images/Olga_2.jpg" class="team-img" alt="Ольга Репина" width="270" />
             <h3 class="title">Ольга Репина</h3>
             <p class="text">Frontend Developer</p>
           </li>
           <li>
-            <img src="./images/Nikolai_3.jpg" alt="Николай Тарасов " width="270" />
+            <img src="./images/Nikolai_3.jpg" class="team-img" alt="Николай Тарасов " width="270" />
             <h3 class="title">Николай Тарасов</h3>
             <p class="text">Marketing</p>
           </li>
           <li>
-            <img src="./images/Mihail_4.jpg" alt="Михаил Ермаков " width="270" />
+            <img src="./images/Mihail_4.jpg" class="team-img" alt="Михаил Ермаков " width="270" />
             <h3 class="title">Михаил Ермаков</h3>
             <p class="text">UI Designer</p>
           </li>
         </ul>
       </section>
+    </div>
     </main>
 
     <!-- Подвал-->
     <footer class="footer">
+      <div class="conteiner">
       <a href="./index.html" class="logo">Web<span class="logo-span">Studio</span></a>
       <address class="adress">
         <ul class="address-list">
@@ -131,6 +147,7 @@
           <li><a href="tel:+380961111111" class="link"> +38-096-111-11-11 </a></li>
         </ul>
       </address>
+    </div>
     </footer>
   </body>
 </html>
