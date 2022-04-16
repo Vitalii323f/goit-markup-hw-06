@@ -20,14 +20,17 @@
   --btn-text-color: #ffffff; /*Цвет текста в кнопке*/
   --btn-accent-color: #2196f3; /* Цвет акцента кнопки */
   --btn-primary-color: #f5f4fa; /*Основной цвет кнопки*/
-  --color-border-portfolio: #eeeeee; /* Цвет рамки в карточкаъ портфолио*/
+  --color-border-portfolio: #eeeeee; /* Цвет рамки в карточки портфолио*/
 }
-.conteiner {
+.container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
   outline: 1px solid #f11014;
+}
+.section {
+  padding: 94px 0px;
 }
 /* --------------Прячем заголовки-------------- */
 .visually-hidden {
@@ -62,6 +65,7 @@ body {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none; /* Убираем нижнее подчеркивание ссылок*/
+  margin-right: 93px;
 }
 
 .logo-span {
@@ -74,6 +78,8 @@ body {
 /* Добавляем ссылкам наведение и фокус */
 .site-nav .link {
   color: var(--title-text-color);
+  padding: 30px 0px; /*Задали padding ,тем самым увеличили кликабельность ссылок*/
+  display: block;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -92,13 +98,9 @@ body {
 }
 .address-list .street {
   color: var(--address-text-color);
-  margin-bottom: 9px;
-  outline: 1px solid #f11014;
 }
 .address-list .link {
   color: var(--footer-cont-text-color);
-  outline: 1px solid #f11014;
-  margin-bottom: 9px;
 }
 .address-list .link:hover,
 .address-list .link:focus {
@@ -108,38 +110,51 @@ body {
 .street {
   text-decoration: none; /* Убираем нижнее подчеркивание ссылок*/
 }
-/* Убираем точки в списках */
-.list {
-  list-style: none;
-}
-.feature-list {
-  list-style: none;
-}
-.examples-list {
-  list-style: none;
-}
-.team-list {
-  list-style: none;
-}
+
 .address-list {
   list-style: none;
   font-style: normal; /* Убираем  курсив в ссылках footer */
 }
 /* Секция Header */
+/* Убираем точки в списках */
+.list {
+  list-style: none;
+}
 .header {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding-top: 24px;
-  padding-bottom: 25px;
   background-color: aquamarine;
+  /*width: 1600px;
+  border-bottom: 1px solid var(--header-line-color);
+*/
+}
+/*Создаем Flex контейнер Header*/
+.header .container {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+}
+.contact-nav {
+  display: flex;
+  margin-left: auto;
 }
 
+.site-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
 /* Секция Hero */
 .hero {
   text-align: center;
   background-color: var(--hero-bg-color);
+
   color: var(--hero-text-color);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -173,15 +188,18 @@ body {
   border-radius: 4px;
   padding: 10px 32px;
   border: 0px;
+
   outline: 1px solid #f11014;
 }
 
 /* Задаем цвет тексту секции Особенности */
-
+.feature-list {
+  list-style: none; /* Убираем точки в списках */
+}
 .feature {
-  padding: 94px 0px;
   background-color: cadetblue;
 }
+
 .feature-list .title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -193,9 +211,13 @@ body {
 
 /* Задаем цвет тексту секции
 Чем мы занимаемся */
-.examples {
-  padding-bottom: 94px;
+.examples-list {
+  list-style: none; /* Убираем точки в списках */
+}
+
+.examples.section {
   background-color: #b7a8b7;
+  padding-top: 0px;
 }
 .examples-title {
   color: var(--title-text-color);
@@ -207,8 +229,12 @@ body {
 }
 /* Задаем цвет  секции и тексту
 Наша команда*/
+.team-list {
+  display: inline-block;
+  list-style: none; /* Убираем точки в списках */
+}
+
 .team {
-  padding: 94px 0px;
   background-color: rgb(231, 243, 164);
   /* background-color: var(--secondary-bg-color);*/
 }
@@ -230,10 +256,24 @@ body {
 .team-list .text {
   font-size: 16px;
   line-height: 1.19;
-  margin-bottom: 30px;
 }
-.team-img {
-  margin-bottom: 30px;
+
+.team-div {
+  text-align: center;
+  padding: 30px;
+  padding-right: auto;
+  padding-left: auto;
+
+  outline: 1px solid #f11014;
+}
+
+.team-card {
+  background: #ffffff;
+  /* material shadow v1 */
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 /* Секция footer */
 .footer {
@@ -242,8 +282,21 @@ body {
   line-height: 1.7;
   padding: 60px 0px;
 }
-.footer .logo {
+
+.logo-footer {
+  margin-left: 0px;
   margin-bottom: 20px;
+  outline: 1px solid #f11014;
+}
+.address-street {
+  margin-bottom: 9px;
+  outline: 1px solid #f11014;
+}
+.mail {
+  margin-bottom: 9px;
+  outline: 1px solid #f11014;
+}
+.tel {
   outline: 1px solid #f11014;
 }
 
@@ -257,7 +310,6 @@ body {
 }
 .portfolio {
   background-color: rgb(28, 207, 235);
-  padding: 94px 0px;
 }
 /* Кнопки фильтра ,задаем цвет и свойства */
 .btn-filter {
@@ -269,6 +321,8 @@ body {
   letter-spacing: 0.03em;
 
   background-color: var(--btn-primary-color);
+  outline: 1px solid #f11014;
+  padding: 6px 22px;
   border-radius: 4px;
   border: 0px;
 }
@@ -294,10 +348,15 @@ body {
   color: var(--primary-text-color);
   outline: 1px solid #f11014;
 }
-.portfolio-img {
-  margin-bottom: 20px;
-}
+
 .project .link {
-  border: 1px solid var(--color-border-portfolio);
   display: inline-block;
+}
+
+/*Делаем рамку внизу карточки портфолио*/
+.border {
+  padding: 20px 24px;
+  border-right: 1px solid var(--color-border-portfolio);
+  border-left: 1px solid var(--color-border-portfolio);
+  border-bottom: 1px solid var(--color-border-portfolio);
 }
