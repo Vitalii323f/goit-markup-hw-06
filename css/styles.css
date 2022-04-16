@@ -125,10 +125,9 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  background-color: aquamarine;
-  /*width: 1600px;
+  /*background-color: aquamarine;*/
+  width: 100%;
   border-bottom: 1px solid var(--header-line-color);
-*/
 }
 /*Создаем Flex контейнер Header*/
 .header .container {
@@ -196,9 +195,9 @@ body {
 .feature-list {
   list-style: none; /* Убираем точки в списках */
 }
-.feature {
+/*.feature {
   background-color: cadetblue;
-}
+}*/
 
 .feature-list .title {
   color: var(--title-text-color);
@@ -207,6 +206,21 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
+  outline: 1px solid #f11014;
+}
+.feature-item .text {
+  outline: 1px solid #f11014;
+}
+/* Оборачиваем элементы flex контейнер*/
+.feature .container {
+  display: flex;
+  align-items: center;
+}
+.feature-list {
+  display: flex;
+}
+.feature-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Задаем цвет тексту секции
@@ -216,7 +230,7 @@ body {
 }
 
 .examples.section {
-  background-color: #b7a8b7;
+  /*background-color: #b7a8b7;*/
   padding-top: 0px;
 }
 .examples-title {
@@ -226,7 +240,17 @@ body {
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
+  outline: 1px solid #f11014;
 }
+/* Оборачиваем элементы flex контейнер*/
+
+.examples-list {
+  display: flex;
+}
+.examples-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* Задаем цвет  секции и тексту
 Наша команда*/
 .team-list {
@@ -235,8 +259,8 @@ body {
 }
 
 .team {
-  background-color: rgb(231, 243, 164);
-  /* background-color: var(--secondary-bg-color);*/
+  /*background-color: rgb(231, 243, 164);*/
+  background-color: var(--secondary-bg-color);
 }
 .team-title {
   color: var(--title-text-color);
@@ -245,6 +269,7 @@ body {
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
+  outline: 1px solid #f11014;
 }
 .team-list .title {
   color: var(--title-text-color);
@@ -268,12 +293,23 @@ body {
 }
 
 .team-card {
+  width: 270px;
   background: #ffffff;
   /* material shadow v1 */
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team-list {
+  display: flex;
+  margin-left: -30px;
+}
+.team-card {
+  /*flex-basis: calc(100% / 2 - 30px);*/
+  /*flex-basis: calc((100% - 120px) / 4);*/
+  margin-left: 30px;
 }
 /* Секция footer */
 .footer {
@@ -303,14 +339,17 @@ body {
 /*-------------------- Страница портфолио -----------------*/
 /* Убираем точки в списках */
 .button-list {
+  display: flex;
   list-style: none;
+  /*margin-bottom: 34px;*/
 }
+
 .project {
   list-style: none;
 }
-.portfolio {
-  background-color: rgb(28, 207, 235);
-}
+/*.portfolio {
+   background-color: rgb(28, 207, 235);
+}*/
 /* Кнопки фильтра ,задаем цвет и свойства */
 .btn-filter {
   font-family: inherit; /*Наследование шрифта через родителя */
@@ -331,6 +370,17 @@ body {
   background-color: var(--btn-accent-color);
   color: var(--btn-text-color);
 }
+
+.button-item:not(:last-child) {
+  margin-right: 8px;
+}
+.button-item:last-child {
+  margin-right: auto;
+}
+.button-item:first-child {
+  margin-left: auto;
+}
+
 /* Задаем цвет тексту */
 
 .project .title {
@@ -349,14 +399,25 @@ body {
   outline: 1px solid #f11014;
 }
 
-.project .link {
-  display: inline-block;
-}
-
 /*Делаем рамку внизу карточки портфолио*/
 .border {
   padding: 20px 24px;
   border-right: 1px solid var(--color-border-portfolio);
   border-left: 1px solid var(--color-border-portfolio);
   border-bottom: 1px solid var(--color-border-portfolio);
+  width: 370px;
+}
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  /*gap: 30px;*/
+}
+
+.project-item {
+  /*flex-basis: calc((100% - 90px) / 3);*/
+
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
