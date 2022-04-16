@@ -277,19 +277,21 @@ body {
   font-size: 16px;
   line-height: 1.19;
   margin-bottom: 10px;
+  outline: 1px solid #f11014;
 }
 .team-list .text {
   font-size: 16px;
   line-height: 1.19;
+  outline: 1px solid #f11014;
 }
 
-.team-div {
+.team-board {
   text-align: center;
   padding: 30px;
   padding-right: auto;
   padding-left: auto;
 
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
 
 .team-card {
