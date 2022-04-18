@@ -27,7 +27,7 @@
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
 .section {
   padding: 94px 0px;
@@ -65,6 +65,7 @@ body {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none; /* Убираем нижнее подчеркивание ссылок*/
+
   margin-right: 93px;
 }
 
@@ -115,6 +116,7 @@ body {
   list-style: none;
   font-style: normal; /* Убираем  курсив в ссылках footer */
 }
+
 /* Секция Header */
 /* Убираем точки в списках */
 .list {
@@ -146,9 +148,14 @@ body {
   margin-right: 50px;
 }
 
-.contact-nav-item:not(:last-child) {
-  margin-right: 50px;
+/*Отступы тел и почта двумя способами*/
+.contact-nav .contact-nav-item + .contact-nav-item {
+  margin-left: 50px;
 }
+/*.contact-nav-item:not(:last-child) {
+  margin-right: 50px;
+}*/
+
 /* Секция Hero */
 .hero {
   text-align: center;
@@ -165,11 +172,13 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  outline: 1px solid #f11014;
+
   width: 696px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+
+  /*outline: 1px solid #f11014;*/
 }
 /*Кнопка Заказать услугу */
 .btn-hero {
@@ -188,7 +197,7 @@ body {
   padding: 10px 32px;
   border: 0px;
 
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
 
 /* Задаем цвет тексту секции Особенности */
@@ -206,11 +215,9 @@ body {
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
-  outline: 1px solid #f11014;
+  /* outline: 1px solid #f11014;*/
 }
-.feature-item .text {
-  outline: 1px solid #f11014;
-}
+
 /* Оборачиваем элементы flex контейнер*/
 .feature .container {
   display: flex;
@@ -240,7 +247,7 @@ body {
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
 /* Оборачиваем элементы flex контейнер*/
 
@@ -254,7 +261,6 @@ body {
 /* Задаем цвет  секции и тексту
 Наша команда*/
 .team-list {
-  display: inline-block;
   list-style: none; /* Убираем точки в списках */
 }
 
@@ -269,7 +275,7 @@ body {
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
 .team-list .title {
   color: var(--title-text-color);
@@ -277,21 +283,17 @@ body {
   font-size: 16px;
   line-height: 1.19;
   margin-bottom: 10px;
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
 .team-list .text {
   font-size: 16px;
   line-height: 1.19;
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
 
 .team-board {
   text-align: center;
   padding: 30px;
-  padding-right: auto;
-  padding-left: auto;
-
-  /*outline: 1px solid #f11014;*/
 }
 
 .team-card {
@@ -324,18 +326,15 @@ body {
 .logo-footer {
   margin-left: 0px;
   margin-bottom: 20px;
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
 .address-street {
   margin-bottom: 9px;
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
 .mail {
   margin-bottom: 9px;
-  outline: 1px solid #f11014;
-}
-.tel {
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
 
 /*-------------------- Страница портфолио -----------------*/
@@ -362,11 +361,14 @@ body {
   letter-spacing: 0.03em;
 
   background-color: var(--btn-primary-color);
-  outline: 1px solid #f11014;
+
   padding: 6px 22px;
   border-radius: 4px;
   border: 0px;
+
+  /* outline: 1px solid #f11014;*/
 }
+
 .btn-filter:hover,
 .btn-filter:focus {
   background-color: var(--btn-accent-color);
@@ -376,9 +378,11 @@ body {
 .button-item:not(:last-child) {
   margin-right: 8px;
 }
+
 .button-item:last-child {
   margin-right: auto;
 }
+
 .button-item:first-child {
   margin-left: auto;
 }
@@ -391,14 +395,16 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
+
   margin-bottom: 4px;
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
+
 .project .text {
   font-size: 16px;
   line-height: 1.9;
   color: var(--primary-text-color);
-  outline: 1px solid #f11014;
+  /*outline: 1px solid #f11014;*/
 }
 
 /*Делаем рамку внизу карточки портфолио*/
@@ -409,6 +415,7 @@ body {
   border-bottom: 1px solid var(--color-border-portfolio);
   width: 370px;
 }
+
 .project {
   display: flex;
   flex-wrap: wrap;
