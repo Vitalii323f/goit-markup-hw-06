@@ -21,6 +21,9 @@
   --btn-accent-color: #2196f3; /* Цвет акцента кнопки */
   --btn-primary-color: #f5f4fa; /*Основной цвет кнопки*/
   --color-border-portfolio: #eeeeee; /* Цвет рамки в карточки портфолио*/
+
+  --color-social-client-icon: #afb1b8; /* Основной цвет иконок соц. и клиентов */
+  --accent-color-icon: #ffffff; /*Цвет акцента соц сетей */
 }
 .container {
   width: 1200px;
@@ -159,11 +162,14 @@ body {
 /* Секция Hero */
 .hero {
   text-align: center;
-  background-color: var(--hero-bg-color);
-
   color: var(--hero-text-color);
+  max-width: 1600px;
+  background-color: var(--hero-bg-color);
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
 }
 .hero-title {
   font-weight: 900;
@@ -260,7 +266,8 @@ body {
 
 /* Задаем цвет  секции и тексту
 Наша команда*/
-.team-list {
+.team-list,
+.team-social-list {
   list-style: none; /* Убираем точки в списках */
 }
 
@@ -288,7 +295,12 @@ body {
 .team-list .text {
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 16px;
   /*outline: 1px solid #f11014;*/
+}
+.team-list {
+  display: flex;
+  margin-left: -30px;
 }
 
 .team-board {
@@ -299,23 +311,71 @@ body {
 .team-card {
   width: 270px;
   background: #ffffff;
-  /* material shadow v1 */
+  margin-left: 30px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list {
+/*------Создаем социальные ссылки------*/
+.team-social-list {
   display: flex;
-  margin-left: -30px;
+  justify-content: center;
 }
-.team-card {
-  /*flex-basis: calc(100% / 2 - 30px);*/
-  /*flex-basis: calc((100% - 120px) / 4);*/
-  margin-left: 30px;
+.team-social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--color-social-client-icon);
 }
+/*------Делаем hover для Соц сетей------*/
+
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--accent-color-icon);
+}
+
+/*---Второй пример hover---*/
+/*.team-social-icon {
+  fill: currentColor;
+}
+
+.team-social-link:hover {
+  background-color: var(--accent-color);
+  color: var(--accent-color-icon);
+}*/
+
+/*---Третий пример hover является самым 
+обширным для решения любых задач---*/
+
+/*.team-social-link:hover {
+  background-color: var(--accent-color);
+}
+.team-social-link:hover .team-social-icon {
+  fill: var(--accent-color-icon);
+}
+.team-social-icon {
+  fill: var(--color-social-client-icon);
+}*/
+
+/*-----Делаем отступ через селектор соседа-----*/
+.team-social-item + .team-social-item {
+  margin-left: 10px;
+}
+
 /* Секция footer */
+.footer .container {
+  display: flex;
+}
+.container-address {
+  margin-right: 70px;
+}
 .footer {
   background-color: var(--footer-bg-color);
   font-size: 14px;
@@ -335,6 +395,49 @@ body {
 .mail {
   margin-bottom: 9px;
   /*outline: 1px solid #f11014;*/
+}
+
+/*------Задаем текст заголовку------*/
+.social-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--hero-text-color);
+  margin-bottom: 10px;
+  padding-top: 9px;
+}
+.footer-social-list {
+  list-style: none;
+}
+/*------Создаем социальные ссылки------*/
+.footer-social-list {
+  display: flex;
+  /*justify-content: center;*/
+}
+.footer-social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--color-social-client-icon);
+}
+/*------Делаем hover для Соц сетей------*/
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
+  fill: var(--accent-color-icon);
+}
+
+/*-----Делаем отступ через селектор соседа-----*/
+.footer-social-item + .footer-social-item {
+  margin-left: 10px;
 }
 
 /*-------------------- Страница портфолио -----------------*/
