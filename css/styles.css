@@ -369,7 +369,47 @@ body {
   margin-left: 10px;
 }
 
-/* Секция footer */
+/*--------------Секция постоянные клиенты ------------*/
+.сlients-list {
+  display: flex;
+}
+.сlients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+
+  margin-bottom: 50px;
+}
+.сlients-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--color-social-client-icon);
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  fill: var(--color-social-client-icon);
+}
+
+.сlients-icon {
+  color: var(--color-social-client-icon);
+}
+/*------Делаем hover для Icon------*/
+
+.сlients-link:hover,
+.сlients-link:focus {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.сlients-item + .сlients-item {
+  margin-left: 30px;
+}
+/* -------------------------Секция footer--------------------- */
 .footer .container {
   display: flex;
 }
@@ -397,25 +437,27 @@ body {
   /*outline: 1px solid #f11014;*/
 }
 
-/*------Задаем текст заголовку------*/
+/*------Создаем социальные ссылки------*/
+
+/*------Задаем текст заголовку ------*/
 .social-title {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--hero-text-color);
   margin-bottom: 10px;
   padding-top: 9px;
 }
+
 .footer-social-list {
   list-style: none;
 }
-/*------Создаем социальные ссылки------*/
+
 .footer-social-list {
   display: flex;
-  /*justify-content: center;*/
 }
 .footer-social-link {
   width: 44px;
