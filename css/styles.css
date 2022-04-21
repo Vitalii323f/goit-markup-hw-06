@@ -22,6 +22,7 @@
   --btn-primary-color: #f5f4fa; /*Основной цвет кнопки*/
   --color-border-portfolio: #eeeeee; /* Цвет рамки в карточки портфолио*/
 
+  --background-feature-icon: #f5f4fa; /*Цвет фона иконок Особенности*/
   --color-social-client-icon: #afb1b8; /* Основной цвет иконок соц. и клиентов */
   --accent-color-icon: #ffffff; /*Цвет акцента соц сетей */
 }
@@ -120,7 +121,7 @@ body {
   font-style: normal; /* Убираем  курсив в ссылках footer */
 }
 
-/* Секция Header */
+/* ---------Секция Header ----------*/
 /* Убираем точки в списках */
 .list {
   list-style: none;
@@ -158,6 +159,22 @@ body {
 /*.contact-nav-item:not(:last-child) {
   margin-right: 50px;
 }*/
+
+/*---Центрируем иконки конверт и телефон---*/
+.contact-nav-item .link {
+  display: flex;
+  align-items: center;
+}
+/*Задаем цвет иконок конверт и телефон */
+.contact-icon {
+  fill: var(--color-social-client-icon);
+  margin-right: 10px;
+}
+/* Иконка наследует цвет ссылки при hover*/
+.contact-nav .link:hover .contact-icon,
+.contact-nav .link:focus .contact-icon {
+  fill: currentColor;
+}
 
 /* Секция Hero */
 .hero {
@@ -205,14 +222,11 @@ body {
 
   /*outline: 1px solid #f11014;*/
 }
-
+/*---------- Секция Особенности ---------*/
 /* Задаем цвет тексту секции Особенности */
 .feature-list {
   list-style: none; /* Убираем точки в списках */
 }
-/*.feature {
-  background-color: cadetblue;
-}*/
 
 .feature-list .title {
   color: var(--title-text-color);
@@ -225,19 +239,24 @@ body {
 }
 
 /* Оборачиваем элементы flex контейнер*/
-.feature .container {
-  display: flex;
-  align-items: center;
-}
+
 .feature-list {
   display: flex;
+  /*align-items: center;*/
+  justify-content: center;
 }
 .feature-item:not(:last-child) {
   margin-right: 30px;
 }
 
-/* Задаем цвет тексту секции
-Чем мы занимаемся */
+.feature-icon {
+  display: flex;
+  background-color: var(--background-feature-icon);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+/*---------- Задаем цвет тексту секции Чем мы занимаемся ------*/
 .examples-list {
   list-style: none; /* Убираем точки в списках */
 }
@@ -309,7 +328,7 @@ body {
 }
 
 .team-card {
-  width: 270px;
+  /*width: 270px;*/
   background: #ffffff;
   margin-left: 30px;
 
@@ -574,4 +593,9 @@ body {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+}
+
+/* Делаем тень при hover */
+.project-item:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
