@@ -60,6 +60,10 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
+/* Убираем точки в списках */
+.list {
+  list-style: none;
+}
 
 /* Задаем цвет логотипа */
 .logo {
@@ -117,21 +121,17 @@ body {
 }
 
 .address-list {
-  list-style: none;
   font-style: normal; /* Убираем  курсив в ссылках footer */
 }
 
 /* ---------Секция Header ----------*/
-/* Убираем точки в списках */
-.list {
-  list-style: none;
-}
+
 .header {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  /*background-color: aquamarine;*/
+
   width: 100%;
   border-bottom: 1px solid var(--header-line-color);
 }
@@ -189,7 +189,7 @@ body {
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bg.jpg);
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -228,10 +228,8 @@ body {
   /*outline: 1px solid #f11014;*/
 }
 /*---------- Секция Особенности ---------*/
+
 /* Задаем цвет тексту секции Особенности */
-.feature-list {
-  list-style: none; /* Убираем точки в списках */
-}
 
 .feature-list .title {
   color: var(--title-text-color);
@@ -264,12 +262,8 @@ body {
 }
 
 /*---------- Задаем цвет тексту секции Чем мы занимаемся ------*/
-.examples-list {
-  list-style: none; /* Убираем точки в списках */
-}
 
-.examples.section {
-  /*background-color: #b7a8b7;*/
+.examples {
   padding-top: 0px;
 }
 .examples-title {
@@ -290,15 +284,9 @@ body {
   margin-right: 30px;
 }
 
-/* Задаем цвет  секции и тексту
-Наша команда*/
-.team-list,
-.team-social-list {
-  list-style: none; /* Убираем точки в списках */
-}
+/*------- Задаем цвет  секции и тексту Наша команда-------*/
 
 .team {
-  /*background-color: rgb(231, 243, 164);*/
   background-color: var(--secondary-bg-color);
 }
 .team-title {
@@ -478,10 +466,6 @@ body {
 }
 
 .footer-social-list {
-  list-style: none;
-}
-
-.footer-social-list {
   display: flex;
 }
 .footer-social-link {
@@ -511,7 +495,7 @@ body {
 .button-list {
   display: flex;
   list-style: none;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .project {
@@ -591,6 +575,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
+  margin-top: -30px;
   /*gap: 30px;*/
 }
 
