@@ -247,8 +247,6 @@ body {
 
 .feature-list {
   display: flex;
-  /*align-items: center;*/
-  justify-content: center;
 }
 .feature-item:not(:last-child) {
   margin-right: 30px;
