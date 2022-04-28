@@ -25,6 +25,9 @@
   --background-feature-icon: #f5f4fa; /*Цвет фона иконок Особенности*/
   --color-social-client-icon: #afb1b8; /* Основной цвет иконок соц. и клиентов */
   --accent-color-icon: #ffffff; /*Цвет акцента соц сетей */
+  /*--- Переменные анимации---*/
+  --transition-duration: 500ms;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container {
   width: 1200px;
@@ -65,6 +68,18 @@ body {
   list-style: none;
 }
 
+/* ---------Секция Header ----------*/
+
+.header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  width: 100%;
+  border-bottom: 1px solid var(--header-line-color);
+}
+
 /* Задаем цвет логотипа */
 .logo {
   color: var(--accent-color);
@@ -89,6 +104,10 @@ body {
   color: var(--title-text-color);
   padding: 30px 0px; /*Задали padding ,тем самым увеличили кликабельность ссылок*/
   display: block;
+
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -97,44 +116,37 @@ body {
 .site-nav .link.current {
   color: var(--accent-color); /* Делает акцент на активную страницу */
 }
+/* Сделал нижнее подчеркивание активной страницы*/
+.link.current {
+  position: relative;
+}
+
+.link.current::after {
+  content: '';
+
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: var(--accent-color);
+}
 
 .contact-nav .link {
   color: var(--primary-text-color);
+
+  transition-property: fill, color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 .contact-nav .link:hover,
 .contact-nav .link:focus {
   color: var(--accent-color);
 }
-.address-list .street {
-  color: var(--address-text-color);
-}
-.address-list .link {
-  color: var(--footer-cont-text-color);
-}
-.address-list .link:hover,
-.address-list .link:focus {
-  color: var(--accent-color);
-}
-.link,
-.street {
-  text-decoration: none; /* Убираем нижнее подчеркивание ссылок*/
-}
 
-.address-list {
-  font-style: normal; /* Убираем  курсив в ссылках footer */
-}
-
-/* ---------Секция Header ----------*/
-
-.header {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-
-  width: 100%;
-  border-bottom: 1px solid var(--header-line-color);
-}
 /*Создаем Flex контейнер Header*/
 .header .container {
   display: flex;
@@ -165,10 +177,14 @@ body {
   display: flex;
   align-items: center;
 }
+
 /*Задаем цвет иконок конверт и телефон */
 .contact-icon {
-  fill: var(--color-social-client-icon);
+  fill: var(--primary-text-color);
   margin-right: 10px;
+  transition-property: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 /* Иконка наследует цвет ссылки при hover*/
 .contact-nav .link:hover .contact-icon,
@@ -280,6 +296,31 @@ body {
 .examples-list {
   display: flex;
 }
+
+/* Текст с фоном спозиционирован поверх изображения*/
+.examples-item {
+  position: relative;
+}
+
+.label-title {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  left: 0;
+  bottom: 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px 0px;
+  color: var(--hero-text-color);
+
+  background: rgba(47, 48, 58, 0.8);
+}
+
 .examples-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -334,17 +375,20 @@ body {
 /*------Создаем социальные ссылки------*/
 .team-social-list {
   display: flex;
-  justify-content: center;
 }
 .team-social-link {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   fill: var(--color-social-client-icon);
+
+  transition-property: background-color, fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 /*------Делаем hover для Соц сетей------*/
 
@@ -406,6 +450,10 @@ body {
   justify-content: center;
   align-items: center;
   fill: var(--color-social-client-icon);
+
+  transition-property: border-color, fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .сlients-icon {
@@ -423,6 +471,7 @@ body {
   margin-left: 30px;
 }
 /* -------------------------Секция footer--------------------- */
+
 .footer .container {
   display: flex;
 }
@@ -448,6 +497,31 @@ body {
 .mail {
   margin-bottom: 9px;
   /*outline: 1px solid #f11014;*/
+}
+
+.address-list .street {
+  color: var(--address-text-color);
+}
+.address-list .link {
+  color: var(--footer-cont-text-color);
+}
+/* Добавляем ссылкам наведение и фокус */
+.address-list .link {
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+.address-list .link:hover,
+.address-list .link:focus {
+  color: var(--accent-color);
+}
+.link,
+.street {
+  text-decoration: none; /* Убираем нижнее подчеркивание ссылок*/
+}
+
+.address-list {
+  font-style: normal; /* Убираем  курсив в ссылках footer */
 }
 
 /*------Создаем социальные ссылки------*/
@@ -477,6 +551,10 @@ body {
   justify-content: center;
   align-items: center;
   fill: var(--accent-color-icon);
+
+  transition-property: background-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 /*------Делаем hover для Соц сетей------*/
 
@@ -490,6 +568,53 @@ body {
   margin-left: 10px;
 }
 
+/*------ Создаем backdrop и модальное окно ------*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition-property: opacity, visibility;
+  transition-duration: 500ms;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transform: translate(-50%, -50%);
+  transition-property: transform, rotate(0deg);
+  transition-duration: 500ms;
+}
+.modal-close-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #999999;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop.is-hidden .modal {
+  transform: rotate(-180deg);
+  transition-duration: 500ms;
+}
 /*-------------------- Страница портфолио -----------------*/
 /* Убираем точки в списках */
 .button-list {
@@ -518,6 +643,9 @@ body {
   padding: 6px 22px;
   border-radius: 4px;
   border: 0px;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 
   /* outline: 1px solid #f11014;*/
 }
@@ -585,9 +713,43 @@ body {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
+
+  transition-property: box-shadow;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
-/* Делаем тень при hover */
+.project-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.description {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(101%);
+  transition-property: transform;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  color: var(--hero-text-color);
+
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+}
+
+/* Делаем тень и вызываем оверлей с 
+текстом  при hover  */
+
 .project-item:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.project-item:hover .description {
+  transform: translateY(0);
 }
