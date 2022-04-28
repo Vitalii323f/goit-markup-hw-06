@@ -26,7 +26,7 @@
   --color-social-client-icon: #afb1b8; /* Основной цвет иконок соц. и клиентов */
   --accent-color-icon: #ffffff; /*Цвет акцента соц сетей */
   /*--- Переменные анимации---*/
-  --transition-duration: 500ms;
+  --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .container {
@@ -577,7 +577,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition-property: opacity, visibility;
-  transition-duration: 500ms;
+  transition-duration: 1500ms;
 }
 
 .modal {
@@ -592,8 +592,8 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   transform: translate(-50%, -50%);
-  transition-property: transform, rotate(0deg);
-  transition-duration: 500ms;
+  transition-property: rotate(0deg) scale(1);
+  transition-duration: 1000ms;
 }
 .modal-close-btn {
   position: absolute;
@@ -612,8 +612,8 @@ body {
   visibility: hidden;
 }
 .backdrop.is-hidden .modal {
-  transform: rotate(-180deg);
-  transition-duration: 500ms;
+  transform: rotateY(-180deg) scale(0.1);
+  transition-duration: 1000ms;
 }
 /*-------------------- Страница портфолио -----------------*/
 /* Убираем точки в списках */
