@@ -416,8 +416,29 @@
             </li>
           </ul>
         </div>
+        <!-- Форма подписки-->
+        <div class="subscribe">
+          <p class="subscribe-item">Подпишитесь на рассылку</p>
+
+          <form class="subscribe-form">
+            <input
+              type="email"
+              class="subscribe-input"
+              name="user-email"
+              required
+              placeholder="E-mail"
+            />
+            <button type="submit" class="subscribe-send">
+              Подписаться
+              <svg class="subscribe-icon" width="24px" height="24px">
+                <use href="./images/icons.svg#icon-subscribe-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
     <!--Создаем backdrop и модальное окно-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">

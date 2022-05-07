@@ -529,15 +529,18 @@ body {
 /*------Создаем социальные ссылки------*/
 
 /*------Задаем текст заголовку ------*/
+
+.footer-social {
+  margin-right: 93px;
+}
 .social-title {
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--hero-text-color);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding-top: 9px;
 }
 
@@ -569,6 +572,90 @@ body {
 .footer-social-item + .footer-social-item {
   margin-left: 10px;
 }
+
+/*-----Подписка на рассылку------*/
+.subscribe {
+  width: 100%;
+}
+
+.subscribe-item {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--hero-text-color);
+
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.subscribe-form {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  padding-left: 15px;
+
+  color: var(--hero-text-color);
+  outline: none;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  cursor: pointer;
+  transition-property: border-color, color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+.subscribe-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.subscribe-input:focus,
+.subscribe-input:focus::placeholder {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.subscribe-send {
+  position: relative;
+  display: flex;
+
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+  margin-left: 12px;
+
+  background-color: var(--btn-accent-color);
+  border: none;
+  border-radius: 4px;
+  /*outline: none;*/
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  color: var(--btn-text-color);
+}
+
+.subscribe-icon {
+  position: absolute;
+  right: 28px;
+  top: 13px;
+  margin-left: 10px;
+}
+/*.subscribe-send:focus {
+  
+}*/
 
 /*------ Создаем backdrop и модальное окно ------*/
 
@@ -719,19 +806,20 @@ body {
 }
 .check-text {
   display: flex;
-  align-items: center;
+
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
-  margin-left: 14px;
+  align-items: center;
+  justify-content: center;
 }
 
 .check-text::before {
   content: '';
   width: 16px;
   height: 15px;
-  border: 3px solid var(--title-text-color);
+  border: 2px solid var(--title-text-color);
   border-radius: 3px;
   margin-right: 9px;
   transition-property: background-color, background-image;
