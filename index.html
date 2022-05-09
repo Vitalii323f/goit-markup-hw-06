@@ -442,7 +442,11 @@
     <!--Создаем backdrop и модальное окно-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="modal-close-btn" data-modal-close>X</button>
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-icon" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-close-modal"></use>
+          </svg>
+        </button>
         <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
         <form>

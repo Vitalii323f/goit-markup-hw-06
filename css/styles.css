@@ -689,19 +689,28 @@ body {
   position: absolute;
   right: 8px;
   top: 8px;
+
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
 
-  transition-property: color;
+  transition-property: fill;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.modal-close-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .is-hidden {
@@ -890,9 +899,7 @@ body {
 .project {
   list-style: none;
 }
-/*.portfolio {
-   background-color: rgb(28, 207, 235);
-}*/
+
 /* Кнопки фильтра ,задаем цвет и свойства */
 .btn-filter {
   font-family: inherit; /*Наследование шрифта через родителя */
